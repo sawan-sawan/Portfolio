@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 // Apne projects ki jankari yahan daalein (Maine ek 5th project add kar diya hai)
 const projects = [
   {
-    name: 'E-commerce Store',
+    name: 'E-commerce Store Website',
     image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604467/Screenshot_2025-10-15_141847_u9egxv.png',
     description: 'A modern e-commerce platform with a clean UI.',
     technologies: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'],
@@ -19,18 +19,18 @@ const projects = [
     liveLink: 'https://grand-virsa.vercel.app/',
   },
   {
-    name: 'Agriculture Equipment',
+    name: 'Agriculture Equipment Website',
     image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604039/brownkudi_hei8vk.png',
     description: 'A platform connecting farmers with equipment buyers.',
     technologies: ['Figma', 'Photoshop', 'Illustrator'],
     liveLink: 'https://www.brownkudi.com/',
   },
   {
-    name: 'Personal Portfolio',
+    name: 'My Portfolio Website',
     image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604031/portfolio_i8ubtj.png',
     description: 'A personal portfolio to showcase skills and projects.',
     technologies: ['Next.js', 'TypeScript', 'CSS Modules'],
-    liveLink: 'https://myportfolio.com/',
+    liveLink: 'https://www.sawankumar.site/',
   },
   { // YEH 5th PROJECT HAI
     name: 'Workshop Website ',
