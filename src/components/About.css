@@ -150,7 +150,7 @@ body {
 
 .tool-item:hover {
     transform: translateY(-4px);
-    background-color: rgba(168, 85, 247, 0.2);
+    background-color: rgba(68, 63, 73, 0.2);
 }
 
 .tool-icon {

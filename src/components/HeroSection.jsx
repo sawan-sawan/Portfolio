@@ -107,7 +107,7 @@ const HeroSection = () => {
             <section className="hero-section">
                 <div className="hero-content">
                     <h1 className="hero-reveal">Hello, I'm <br /><span style={{ color: "#5097f7" }}>Sawan</span></h1>
-                    <p className="hero-reveal">Full-stack developer creating digital solutions that matter.</p>
+                    <p className="hero-reveal"> Frontend Developer creating digital solutions that matter.</p>
                     <div className="hero-buttons hero-reveal">
                         <a href="#work" className="get-started" style={{ backgroundColor: "rgb(80, 151, 247)", color: "white" }}>View Work</a>
                         <a href="#contact" className="watch-demo" style={{ background: "transparent", border: "1px solid #475569", color: "white" }}>Contact</a>

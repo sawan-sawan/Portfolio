@@ -48,7 +48,7 @@ export default function About() {
           <div className="image-container">
             {/* ===== यहाँ बदलाव किया गया है ===== */}
             <video
-              src="/assets/gif.mp4" /* <--- यहाँ अपनी वीडियो का लिंक डालें */
+              src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1760675286/gif_fasqvm.mp4" /* <--- यहाँ अपनी वीडियो का लिंक डालें */
               className="profile-photo"
               autoPlay
               loop
