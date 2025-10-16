@@ -46,7 +46,18 @@ export default function About() {
         {/* Image Section */}
         <div className="image-section child-reveal">
           <div className="image-container">
-            <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604030/myphoto_w2jqje.png" alt="My Photo" className="profile-photo" />
+            {/* ===== यहाँ बदलाव किया गया है ===== */}
+            <video
+              src="/assets/gif.mp4" /* <--- यहाँ अपनी वीडियो का लिंक डालें */
+              className="profile-photo"
+              autoPlay
+              loop
+              muted
+              playsInline /* मोबाइल डिवाइस पर सही से चलने के लिए */
+            >
+              Your browser does not support the video tag.
+            </video>
+            {/* =============================== */}
           </div>
         </div>
 
