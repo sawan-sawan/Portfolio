@@ -79,7 +79,7 @@
     transition: opacity 0.4s ease-out;
 }
 
-/* Desktop par hover effect */
+/* Desktop par hover effect (aur mobile par tap effect) */
 .work-card:hover .work-image {
     transform: scale(1.05);
 }
@@ -150,7 +150,7 @@
     color: #ffffff;
     border-radius: 999px;
     padding: 10px 24px;
-    margin: 80px auto 0; /* Ab niche margin 0 hai */
+    margin: 80px auto 0;
     cursor: pointer;
     font-size: 1rem;
     font-family: inherit;
@@ -166,21 +166,19 @@
 /* Responsive Styles */
 /* ============================= */
 
-/* Mobile ke liye Hover Fix */
 @media (max-width: 767px) {
+    /* YEH BADLA GAYA HAI: opacity: 1; wali line hata di gayi hai */
     .work-overlay {
-        opacity: 1; /* Mobile par hamesha dikhega */
-        background: linear-gradient(to top, rgba(11, 15, 25, 1), rgba(11, 15, 25, 0.5));
-        padding: 16px; /* Padding kam ki gayi */
+        padding: 16px;
     }
     .work-card:hover .work-image {
         transform: none; /* Mobile par image zoom nahi hogi */
     }
     .work-title {
-        font-size: 1.2rem; /* Font size chota kiya gaya */
+        font-size: 1.2rem;
     }
     .work-description-text {
-        font-size: 0.8rem; /* Font size chota kiya gaya */
+        font-size: 0.8rem;
         margin-bottom: 12px;
     }
     .work-tech-list {

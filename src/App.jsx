@@ -12,10 +12,10 @@ export default function App() {
     return (
         <>
             <LenisScroll />
-           <HeroSection />
+            <HeroSection />
+            <Work />
             <About />
             <Services />
-            <Work />
             <Contact />
             <Footer />
         </>
