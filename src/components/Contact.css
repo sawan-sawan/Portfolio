@@ -1,0 +1,224 @@
+/* ============================= */
+/* Contact Section Styles */
+/* ============================= */
+
+.contact-section {
+    width: 100%;
+    padding: 80px 16px;
+    scroll-margin-top: 80px;
+    background-color: #0b0f19;
+    color: #d1d5db;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Glow Effect */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(1, 99, 211, 0.1), transparent 70%);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+/* Headings and Text */
+.contact-section .intro-subtitle,
+.contact-section .main-heading,
+.contact-section .section-description {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section .intro-subtitle {
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+    color: #d9d1f1;
+}
+
+.contact-section .main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.contact-section .gradient-text {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ae93fffd, #0163d3);
+}
+
+.contact-section .section-description {
+    max-width: 42rem;
+    margin: 20px auto 48px;
+    color: #9ca3af;
+}
+
+/* Main Wrapper */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1;
+}
+
+.info-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.info-description {
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.contact-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    color: #5097f7;
+}
+
+.contact-text {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    color: #9ca3af;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #5097f7;
+    transform: scale(1.1);
+}
+
+/* Right Side: Form */
+.contact-form {
+    flex: 1.5;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    background-color: #101522;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #5097f7;
+    box-shadow: 0 0 0 3px rgba(80, 151, 247, 0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 24px;
+}
+.submit-wrapper {
+    display: flex;
+    justify-content: center; /* Button ko center me laane ke liye */
+    margin-top: 16px;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* gap property hata di gayi hai kyunki ab icon nahi hai */
+    width: auto;
+    /* Padding kam karke button ko chota kiya gaya hai */
+    padding: 10px 28px; 
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(to right, #ae93ff, #0163d3);
+    color: #ffffff;
+    font-size: 0.95rem; /* Font size bhi thoda kam kiya hai */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(1, 99, 211, 0.2);
+}
+
+.form-result {
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+.form-result.success { color: #34d399; }
+.form-result.error { color: #f87171; }
+
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .contact-section {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-section {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    .contact-wrapper {
+        flex-direction: row;
+    }
+}

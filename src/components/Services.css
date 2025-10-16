@@ -1,0 +1,139 @@
+/* ============================= */
+/* Services Section Styles */
+/* ============================= */
+
+.services-section {
+    width: 100%;
+    padding: 80px 16px;
+    scroll-margin-top: 80px;
+    background-color: #0b0f19; /* Theme background */
+    color: #d1d5db;
+    overflow-x: hidden; /* Extra horizontal scroll rokne ke liye */
+}
+
+/* Headings and Text (About page se same) */
+.services-section .intro-subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+    color: #d9d1f1;
+}
+
+.services-section .main-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.services-section .gradient-text {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ae93fffd, #0163d3);
+}
+
+.services-section .section-description {
+    text-align: center;
+    max-width: 42rem; /* max-w-2xl */
+    margin: 20px auto 48px; /* mt-5 mb-12 */
+    color: #9ca3af; /* text-gray-400 */
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile par 1 column */
+    gap: 24px; /* gap-6 */
+    margin-top: 40px;
+}
+
+/* Service Card Styles */
+.service-card {
+    background-color: #101522;
+    padding: 32px; /* px-8 py-12 */
+    border-radius: 12px; /* rounded-lg */
+    border: 1px solid #374151; /* Darker border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* hover:-translate-y-2 */
+    border-color: #5097f7; /* Hover par border color badlega */
+    box-shadow: 0 10px 30px rgba(80, 151, 247, 0.1);
+}
+
+.service-icon {
+    width: 48px; /* w-12 */
+    height: 48px;
+    margin-bottom: 24px;
+    color: #5097f7; /* Icon ka color theme se match karega */
+}
+
+.service-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.service-description {
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.service-link:hover {
+    color: #5097f7;
+    gap: 12px;
+}
+
+.service-link svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .services-section {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet par 2 columns */
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-section {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop par 3 columns */
+    }
+}
+/* Reveal Animation for Services */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
+  transition-delay: var(--delay, 0s);
+}

@@ -1,0 +1,247 @@
+/* Basic Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #d1d5db;
+    font-family: sans-serif;
+}
+
+/* Main About Section Container */
+.about-section {
+    width: 100%;
+    padding: 80px 16px;
+    scroll-margin-top: 80px;
+    overflow-x: hidden; /* Extra horizontal scroll rokne ke liye */
+}
+
+/* Headings and Text */
+.intro-subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+    color: #d9d1f1;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.gradient-text {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ae93fffd, #0163d3);
+}
+
+.description {
+    margin-bottom: 40px;
+    max-width: 42rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #9ca3af;
+}
+
+.tools-heading {
+    margin: 24px 0;
+    font-size: 1.125rem;
+    color: #ffffff;
+}
+
+/* Layout */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin: 80px 0;
+}
+
+.image-section, .info-section {
+    width: 100%;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    max-width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+}
+
+/* Info Cards & Tools */
+.info-cards, .tools-list {
+    list-style: none;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 42rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    padding: 1px;
+    border-radius: 12px;
+    border: 1px solid #5097f7;
+}
+
+.card-content {
+    background-color: #101522;
+    height: 100%;
+    border-radius: 11px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-icon {
+    width: 32px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    margin: 8px 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-description {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.tools-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(51, 65, 85, 0.533);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-4px);
+    background-color: rgba(168, 85, 247, 0.2);
+}
+
+.tool-icon {
+    width: 28px;
+}
+
+/* ============================= */
+/* Reveal Animation Styles */
+/* ============================= */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .about-section {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .profile-photo {
+        max-width: 500px;
+    }
+    .info-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tools-list {
+        gap: 20px;
+    }
+    .tool-icon {
+        width: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-section {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    .content-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 96px;
+    }
+    .image-section {
+        width: 45%;
+    }
+    .info-section {
+        width: 55%;
+    }
+    
+}
+/* ============================= */
+/* 🔥 Smooth Single Bounce Animation (No Library) */
+/* ============================= */
+
+/* Hidden by default */
+.reveal-on-scroll,
+.child-reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: none; /* transition hata di, taaki sirf ek animation chale */
+}
+
+/* When visible */
+.slide-up {
+  animation: bounceUp 0.9s cubic-bezier(0.25, 1.25, 0.5, 1) both;
+}
+
+/* Keyframes — Single bounce */
+@keyframes bounceUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+

@@ -1,0 +1,108 @@
+/* ============================= */
+/* Footer Section Styles (New Design) */
+/* ============================= */
+
+.footer {
+    width: 100%;
+    padding: 40px 16px 20px;
+    background-color: #0b0f19; /* Matching main background */
+    color: #9ca3af;
+    border-top: 1px solid #374151; /* Separator line from main content */
+}
+
+.footer-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For responsiveness */
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+.footer-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.footer-link {
+    color: #9ca3af;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.social-links-footer {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.social-icon-footer {
+    width: 28px;
+    height: 28px;
+    color: #9ca3af;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-footer:hover {
+    color: #5097f7;
+    transform: translateY(-2px);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #374151; /* Second separator line */
+    text-align: center;
+}
+
+.copyright-text a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+.copyright-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .footer {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+    .footer-main-content {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 30px;
+    }
+    .footer-nav-links {
+        order: 1; /* Logo will be first */
+    }
+    .social-links-footer {
+        order: 2; /* Social links will be last */
+    }
+}

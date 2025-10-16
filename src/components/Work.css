@@ -1,0 +1,213 @@
+/* ============================= */
+/* Work Section Styles */
+/* ============================= */
+
+.work-section {
+    width: 100%;
+    padding: 80px 16px;
+    scroll-margin-top: 80px;
+    background-color: #0b0f19;
+    color: #d1d5db;
+    overflow-x: hidden;
+}
+
+/* Headings and Text */
+.work-section .intro-subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+    color: #d9d1f1;
+}
+
+.work-section .main-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.work-section .gradient-text {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ae93fffd, #0163d3);
+}
+
+.work-section .section-description {
+    text-align: center;
+    max-width: 42rem;
+    margin: 20px auto 48px;
+    color: #9ca3af;
+}
+
+/* Work Grid Layout */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 40px;
+}
+
+/* Work Card Styles */
+.work-card {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #374151;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(11, 15, 25, 0.98), rgba(11, 15, 25, 0.4));
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0; /* Shuru mein chupa rahega */
+    transition: opacity 0.4s ease-out;
+}
+
+/* Desktop par hover effect */
+.work-card:hover .work-image {
+    transform: scale(1.05);
+}
+
+.work-card:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.work-description-text {
+    color: #9ca3af;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.work-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.tech-tag {
+    background-color: rgba(80, 151, 247, 0.1);
+    color: #5097f7;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.work-link:hover {
+    color: #5097f7;
+    gap: 12px;
+}
+
+.work-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Show More Button */
+.show-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: max-content;
+    border: 1px solid #374151;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 10px 24px;
+    margin: 80px auto 0; /* Ab niche margin 0 hai */
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #101522;
+    border-color: #5097f7;
+}
+
+/* ============================= */
+/* Responsive Styles */
+/* ============================= */
+
+/* Mobile ke liye Hover Fix */
+@media (max-width: 767px) {
+    .work-overlay {
+        opacity: 1; /* Mobile par hamesha dikhega */
+        background: linear-gradient(to top, rgba(11, 15, 25, 1), rgba(11, 15, 25, 0.5));
+        padding: 16px; /* Padding kam ki gayi */
+    }
+    .work-card:hover .work-image {
+        transform: none; /* Mobile par image zoom nahi hogi */
+    }
+    .work-title {
+        font-size: 1.2rem; /* Font size chota kiya gaya */
+    }
+    .work-description-text {
+        font-size: 0.8rem; /* Font size chota kiya gaya */
+        margin-bottom: 12px;
+    }
+    .work-tech-list {
+        margin-bottom: 16px;
+    }
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+    .work-section .main-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .work-section {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .work-section {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
