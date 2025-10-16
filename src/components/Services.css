@@ -1,5 +1,5 @@
 /* ============================= */
-/* Services Section Styles */
+/* Services Section Styles       */
 /* ============================= */
 
 .services-section {
@@ -8,10 +8,10 @@
     scroll-margin-top: 80px;
     background-color: #0b0f19; /* Theme background */
     color: #d1d5db;
-    overflow-x: hidden; /* Extra horizontal scroll rokne ke liye */
+    overflow-x: hidden;
 }
 
-/* Headings and Text (About page se same) */
+/* Headings and Text */
 .services-section .intro-subtitle {
     text-align: center;
     margin-bottom: 8px;
@@ -34,43 +34,84 @@
 
 .services-section .section-description {
     text-align: center;
-    max-width: 42rem; /* max-w-2xl */
-    margin: 20px auto 48px; /* mt-5 mb-12 */
-    color: #9ca3af; /* text-gray-400 */
+    max-width: 42rem;
+    margin: 20px auto 48px;
+    color: #9ca3af;
 }
 
 /* Services Grid Layout */
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile par 1 column */
-    gap: 24px; /* gap-6 */
+    grid-template-columns: 1fr;
+    gap: 24px;
     margin-top: 40px;
 }
 
 /* Service Card Styles */
 .service-card {
-    background-color: #101522;
-    padding: 32px; /* px-8 py-12 */
-    border-radius: 12px; /* rounded-lg */
-    border: 1px solid #374151; /* Darker border */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+    perspective: 1000px;
+    min-height: 380px;
 }
 
-.service-card:hover {
-    transform: translateY(-8px); /* hover:-translate-y-2 */
-    border-color: #5097f7; /* Hover par border color badlega */
+/* Inner container that actually flips */
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* When card is flipped, rotate the inner container */
+.service-card.is-flipped .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common styles for both front and back of the card */
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    background-color: #101522;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Apply hover effect only to the front face */
+.service-card:not(.is-flipped):hover .service-card-front {
+    transform: translateY(-8px);
+    border-color: #5097f7;
     box-shadow: 0 10px 30px rgba(80, 151, 247, 0.1);
 }
 
+/* Back face is initially rotated */
+.service-card-back {
+    transform: rotateY(180deg);
+    border-color: #5097f7;
+}
+
 .service-icon {
-    width: 48px; /* w-12 */
+    width: 48px;
     height: 48px;
     margin-bottom: 24px;
-    color: #5097f7; /* Icon ka color theme se match karega */
+    color: #5097f7;
 }
 
 .service-title {
-    font-size: 1.25rem; /* text-xl */
+    font-size: 1.25rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 16px;
@@ -80,8 +121,34 @@
     color: #9ca3af;
     line-height: 1.6;
     margin-bottom: 24px;
+    flex-grow: 1;
 }
 
+/* Styles for the details list on the back */
+.service-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    width: 100%;
+    color: #9ca3af;
+    flex-grow: 1;
+}
+
+.service-details-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.service-details-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #5097f7;
+    font-weight: bold;
+}
+
+/* Service Link & Back Button */
 .service-link {
     display: inline-flex;
     align-items: center;
@@ -90,6 +157,12 @@
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease, gap 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
 }
 
 .service-link:hover {
@@ -103,6 +176,10 @@
     transition: transform 0.3s ease;
 }
 
+.back-button {
+    margin-top: auto;
+}
+
 /* Responsive Styles */
 @media (min-width: 640px) {
     .services-section {
@@ -110,7 +187,7 @@
         padding-right: 8%;
     }
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* Tablet par 2 columns */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -120,9 +197,10 @@
         padding-right: 12%;
     }
     .services-grid {
-        grid-template-columns: repeat(3, 1fr); /* Desktop par 3 columns */
+        grid-template-columns: repeat(3, 1fr);
     }
-}
+} /* <--- YAHAN PAR BRACKET ADD KIYA GAYA HAI */
+
 /* Reveal Animation for Services */
 .reveal-hidden {
   opacity: 0;
