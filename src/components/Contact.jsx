@@ -1,4 +1,4 @@
-import { React, useState  } from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import { useInView } from 'react-intersection-observer';
 
@@ -9,10 +9,6 @@ export default function Contact() {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target);
-
-        // ===================================================================
-        // == STEP 3: APNI ACCESS KEY YAHAAN PASTE KAREIN ==
-        // ===================================================================
         formData.append("access_key", "5ebb4919-c7fe-42cc-b5c4-ec4318a7f772"); 
 
         const res = await fetch("https://api.web3forms.com/submit", {
@@ -23,9 +19,20 @@ export default function Contact() {
         if (res.success) {
             setResult("Success! Your message has been sent.");
             event.target.reset();
+
+            // YEH BADLA GAYA HAI: 4 second baad message ko gayab kar dega
+            setTimeout(() => {
+                setResult("");
+            }, 4000); // 4000 milliseconds = 4 seconds
+
         } else {
             console.log("Error", res);
             setResult(res.message);
+
+            // YEH BHI ADD KIYA HAI: Error message bhi 5 second baad gayab ho jayega
+            setTimeout(() => {
+                setResult("");
+            }, 5000); // 5000 milliseconds = 5 seconds
         }
     };
 
