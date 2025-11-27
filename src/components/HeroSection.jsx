@@ -60,7 +60,7 @@ const HeroSection = () => {
             {/* Navbar */}
             <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
                 <a href="#home" className="logo">
-                    <img src="/public/assets/navlogo.png" alt="logo" />
+                    <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/navlogo_mumtbj.png" alt="logo" />
                 </a>
                 <div className="nav-links">
                     <a href="#home" className={activeLink === "Home" ? "active" : ""} onClick={() => setActiveLink("Home")}>Home</a>
@@ -137,7 +137,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="hero-image-container hero-reveal">
-                    <img src="/public/assets/rightimg.jpg" alt="hero" className="hero-img" />
+                    <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320588/rightimg_r3yjm0.jpg" alt="hero" className="hero-img" />
                     <div className="image-popup">
                         <div className="popup-heart">❤️</div>
                         <div className="popup-content">
