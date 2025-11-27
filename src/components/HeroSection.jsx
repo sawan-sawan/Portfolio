@@ -81,7 +81,7 @@ const HeroSection = () => {
             <div className={`mobile-nav ${isMenuOpen ? "show" : "hide"}`}>
                 <div className="mobile-nav-header">
                     <a href="#home" className="mobile-logo" onClick={() => setIsMenuOpen(false)}>
-                        <img src="/public/assets/mainlogo.png" alt="logo" />
+                        <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/navlogo_mumtbj.png" alt="logo" />
                     </a>
                     <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
