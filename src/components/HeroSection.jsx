@@ -60,7 +60,7 @@ const HeroSection = () => {
             {/* Navbar */}
             <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
                 <a href="#home" className="logo">
-                    <img src="/public/assets/mainlogo.png" alt="logo" />
+                    <img src="/public/assets/navlogo.png" alt="logo" />
                 </a>
                 <div className="nav-links">
                     <a href="#home" className={activeLink === "Home" ? "active" : ""} onClick={() => setActiveLink("Home")}>Home</a>
