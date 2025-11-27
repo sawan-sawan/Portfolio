@@ -48,7 +48,7 @@ export default function About() {
           <div className="image-container">
             {/* ===== यहाँ बदलाव किया गया है ===== */}
             <video
-              src="https://res.cloudinary.com/dnyv7wabr/video/upload/v1760675286/gif_fasqvm.mp4" /* <--- यहाँ अपनी वीडियो का लिंक डालें */
+              src="public/assets/gif.mp4" /* <--- यहाँ अपनी वीडियो का लिंक डालें */
               className="profile-photo"
               autoPlay
               loop
@@ -72,21 +72,21 @@ export default function About() {
           <ul className="info-cards">
             <li className="card child-reveal">
               <div className="card-content">
-                <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604027/code-icon-dark_mieqhn.png" alt="Languages" className="card-icon" />
+                <img src="public/assets/code-icon-dark.png" alt="Languages" className="card-icon" />
                 <h3 className="card-title">Languages</h3>
                 <p className="card-description">HTML, CSS, JavaScript, React.js, Next.js</p>
               </div>
             </li>
             <li className="card child-reveal">
               <div className="card-content">
-                <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604029/edu-icon-dark_zwxxrw.png" alt="Education" className="card-icon" />
+                <img src="public/assets/edu-icon-dark.png" alt="Education" className="card-icon" />
                 <h3 className="card-title">Education</h3>
                 <p className="card-description">B.Tech in Computer Science</p>
               </div>
             </li>
             <li className="card child-reveal">
               <div className="card-content">
-                <img src="https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604031/project-icon-dark_zkkgqh.png" alt="Projects" className="card-icon" />
+                <img src="public/assets/project-icon-dark.png" alt="Projects" className="card-icon" />
                 <h3 className="card-title">Projects</h3>
                 <p className="card-description">Built and contributed to 5+ projects</p>
               </div>

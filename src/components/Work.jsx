@@ -6,35 +6,35 @@ import { useInView } from 'react-intersection-observer';
 const projects = [
   {
     name: 'E-commerce Store Website',
-    image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604467/Screenshot_2025-10-15_141847_u9egxv.png',
+    image: '/public/assets/verto.png',
     description: 'A modern e-commerce platform with a clean UI.',
     technologies: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'],
     liveLink: 'https://www.vertoshop.store/',
   },
   {
     name: 'Resort Booking Website',
-    image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604037/grandvirsa_flix2c.png',
+    image: 'public/assets/grandvirsa.png',
     description: 'A web app to manage resort bookings and inquiries.',
     technologies: ['JavaScript', 'HTML5', 'API', 'CSS'],
     liveLink: 'https://grand-virsa.vercel.app/',
   },
   {
     name: 'Agriculture Equipment Website',
-    image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604039/brownkudi_hei8vk.png',
+    image: 'public/assets/brownkudi.png',
     description: 'A platform connecting farmers with equipment buyers.',
     technologies: ['Figma', 'Photoshop', 'Illustrator'],
     liveLink: 'https://www.brownkudi.com/',
   },
   {
     name: 'My Portfolio Website',
-    image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604031/portfolio_i8ubtj.png',
+    image: 'public/assets/portfolio.png',
     description: 'A personal portfolio to showcase skills and projects.',
     technologies: ['Next.js', 'TypeScript', 'CSS Modules'],
     liveLink: 'https://www.sawankumar.site/',
   },
   { // YEH 5th PROJECT HAI
     name: 'Workshop Website ',
-    image: 'https://res.cloudinary.com/dnyv7wabr/image/upload/v1760604034/sohal_ltxn5l.png', // Aap image ka path badal sakte hain
+    image: 'public/assets/sohal.png', // Aap image ka path badal sakte hain
     description: 'A website for managing workshops and events.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'CSS'],
     liveLink: 'https://sohalenggworks.com/',
