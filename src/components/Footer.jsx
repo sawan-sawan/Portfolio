@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Left Side: Logo */}
         <a href="#" aria-label="Go to homepage">
-          <img src="public/assets/mainlogo.png" alt="Logo" className="footer-logo" />
+          <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/navlogo_mumtbj.png" alt="Logo" className="footer-logo" />
         </a>
 
         {/* Center: Navigation Links */}
