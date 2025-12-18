@@ -6,35 +6,35 @@ import { useInView } from 'react-intersection-observer';
 const projects = [
   {
     name: 'E-commerce Store Website',
-    image: 'https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320595/Screenshot_2025-10-15_141847_sotm30.png',
+    image: 'https://ik.imagekit.io/02x2rciof/Screenshot%202025-10-15%20141847.png',
     description: 'A modern e-commerce platform with a clean UI.',
     technologies: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'],
     liveLink: 'https://www.vertoshop.store/',
   },
   {
     name: 'Resort Booking Website',
-    image: 'https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320587/grandvirsa_x0extn.png',
+    image: 'https://ik.imagekit.io/02x2rciof/grandvirsa.png',
     description: 'A web app to manage resort bookings and inquiries.',
     technologies: ['JavaScript', 'HTML5', 'API', 'CSS'],
     liveLink: 'https://grand-virsa.vercel.app/',
   },
   {
     name: 'Agriculture Equipment Website',
-    image: 'https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320584/brownkudi_zhnquv.png',
+    image: 'https://ik.imagekit.io/02x2rciof/brownkudi.png',
     description: 'A platform connecting farmers with equipment buyers.',
     technologies: ['Figma', 'Photoshop', 'Illustrator'],
     liveLink: 'https://www.brownkudi.com/',
   },
   {
     name: 'My Portfolio Website',
-    image: 'https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/portfolio_whncp3.png',
+    image: 'https://ik.imagekit.io/02x2rciof/portfolio.png',
     description: 'A personal portfolio to showcase skills and projects.',
     technologies: ['Next.js', 'TypeScript', 'CSS Modules'],
     liveLink: 'https://www.sawankumar.site/',
   },
   { // YEH 5th PROJECT HAI
     name: 'Workshop Website ',
-    image: 'https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320590/sohal_lnmpqu.png', // Aap image ka path badal sakte hain
+    image: 'https://ik.imagekit.io/02x2rciof/sohal.png', // Aap image ka path badal sakte hain
     description: 'A website for managing workshops and events.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'CSS'],
     liveLink: 'https://sohalenggworks.com/',

@@ -60,7 +60,7 @@ const HeroSection = () => {
             {/* Navbar */}
             <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
                 <a href="#home" className="logo">
-                    <img src="public/assets/navlogomain.png" alt="logo" />
+                    <img src="https://ik.imagekit.io/02x2rciof/navlogomain.png" alt="logo" />
                 </a>
                 <div className="nav-links">
                     <a href="#home" className={activeLink === "Home" ? "active" : ""} onClick={() => setActiveLink("Home")}>Home</a>
@@ -137,7 +137,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="hero-image-container hero-reveal">
-                    <img src="public/imgs/mainimg.jpg" alt="hero" className="hero-img" />
+                    <img src="https://ik.imagekit.io/02x2rciof/mainimg.jpg" alt="hero" className="hero-img" />
                     <div className="image-popup">
                         <div className="popup-heart">❤️</div>
                         <div className="popup-content">
