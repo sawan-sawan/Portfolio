@@ -137,7 +137,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="hero-image-container hero-reveal">
-                    <img src="public/assets/mainimg.jpg" alt="hero" className="hero-img" />
+                    <img src="public/imgs/mainimg.jpg" alt="hero" className="hero-img" />
                     <div className="image-popup">
                         <div className="popup-heart">❤️</div>
                         <div className="popup-content">
