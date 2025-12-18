@@ -60,7 +60,7 @@ const HeroSection = () => {
             {/* Navbar */}
             <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
                 <a href="#home" className="logo">
-                    <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/navlogo_mumtbj.png" alt="logo" />
+                    <img src="public/assets/navlogomain.png" alt="logo" />
                 </a>
                 <div className="nav-links">
                     <a href="#home" className={activeLink === "Home" ? "active" : ""} onClick={() => setActiveLink("Home")}>Home</a>
@@ -81,7 +81,7 @@ const HeroSection = () => {
             <div className={`mobile-nav ${isMenuOpen ? "show" : "hide"}`}>
                 <div className="mobile-nav-header">
                     <a href="#home" className="mobile-logo" onClick={() => setIsMenuOpen(false)}>
-                        <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320586/navlogo_mumtbj.png" alt="logo" />
+                        <img src="public/assets/navlogomain.png" alt="logo" />
                     </a>
                     <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -137,7 +137,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="hero-image-container hero-reveal">
-                    <img src="https://res.cloudinary.com/dm9sbfva5/image/upload/v1764320588/rightimg_r3yjm0.jpg" alt="hero" className="hero-img" />
+                    <img src="public/assets/mainimg.jpg" alt="hero" className="hero-img" />
                     <div className="image-popup">
                         <div className="popup-heart">❤️</div>
                         <div className="popup-content">
