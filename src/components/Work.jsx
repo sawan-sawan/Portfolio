@@ -37,7 +37,7 @@ const projects = [
     image: 'https://ik.imagekit.io/02x2rciof/sohal.png', // Aap image ka path badal sakte hain
     description: 'A website for managing workshops and events.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'CSS'],
-    liveLink: 'https://sohalenggworks.com/',
+    liveLink: 'https://www.sohalenggworks.com',
   },
 ];
 
